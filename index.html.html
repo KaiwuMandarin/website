@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaiwu FluentPro Mandarin™ - Advance Your Career with Business Mandarin</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #4a5568;
+            text-align: center;
+        }
+        
+        .logo sup {
+            font-size: 0.6rem;
+            margin-left: 2px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 80px 0;
+        }
+        
+        .hero h1 {
+            font-size: 3.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        
+        .hero .subheadline {
+            font-size: 1.4rem;
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+        }
+        
+        .hero p {
+            font-size: 1.1rem;
+            margin-bottom: 2.5rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.9;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(45deg, #ff6b35, #ff8c42, #ff6b35);
+            background-size: 200% 200%;
+            color: white;
+            padding: 22px 42px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.4s ease;
+            box-shadow: 
+                0 8px 25px rgba(255, 107, 53, 0.4),
+                0 0 40px rgba(255, 107, 53, 0.2),
+                inset 0 1px 0 rgba(255,255,255,0.3);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            animation: glow-pulse 2s ease-in-out infinite alternate;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        @keyframes glow-pulse {
+            0% {
+                box-shadow: 
+                    0 8px 25px rgba(255, 107, 53, 0.4),
+                    0 0 40px rgba(255, 107, 53, 0.2),
+                    inset 0 1px 0 rgba(255,255,255,0.3);
+                background-position: 0% 50%;
+            }
+            100% {
+                box-shadow: 
+                    0 12px 35px rgba(255, 107, 53, 0.6),
+                    0 0 60px rgba(255, 107, 53, 0.4),
+                    inset 0 1px 0 rgba(255,255,255,0.3);
+                background-position: 100% 50%;
+            }
+        }
+        
+        .cta-button:hover {
+            background: linear-gradient(45deg, #e55a2b, #e55a2b, #ff6b35);
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 
+                0 15px 45px rgba(255, 107, 53, 0.6),
+                0 0 80px rgba(255, 107, 53, 0.4),
+                inset 0 1px 0 rgba(255,255,255,0.4);
+            animation: none;
+        }
+        
+        .cta-subtext {
+            display: block;
+            margin-top: 15px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        /* Problem Section */
+        .problem {
+            background: white;
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #2d3748;
+        }
+        
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .problem-item {
+            background: #f7fafc;
+            padding: 2rem;
+            border-radius: 15px;
+            border-left: 4px solid #ff6b35;
+        }
+        
+        .problem-item h3 {
+            color: #e53e3e;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .cost-highlight {
+            background: #fed7d7;
+            border: 2px solid #fc8181;
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #c53030;
+        }
+        
+        /* Solution Section */
+        .solution {
+            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+            padding: 80px 0;
+        }
+        
+        .solution-intro {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .solution-intro h2 {
+            font-size: 2.5rem;
+            color: #2d3748;
+            margin-bottom: 1rem;
+        }
+        
+        .solution-intro .tagline {
+            font-size: 1.2rem;
+            color: #667eea;
+            font-style: italic;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        
+        .feature {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            border-top: 4px solid #667eea;
+        }
+        
+        .feature h3 {
+            color: #2d3748;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .checkmark {
+            color: #38a169;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+        
+        /* Social Proof */
+        .social-proof {
+            background: white;
+            padding: 80px 0;
+        }
+        
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .testimonial {
+            background: #f7fafc;
+            padding: 2rem;
+            border-radius: 15px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1rem;
+            color: #4a5568;
+        }
+        
+        .testimonial-author {
+            font-weight: bold;
+            color: #2d3748;
+        }
+        
+        /* Offer Section */
+        .offer {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .offer h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .offer-benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .offer-benefit {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .process-steps {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 3rem 0;
+            backdrop-filter: blur(10px);
+        }
+        
+        .process-steps h3 {
+            margin-bottom: 1.5rem;
+        }
+        
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        
+        .step {
+            text-align: center;
+            padding: 1rem;
+        }
+        
+        .step-number {
+            background: #ff6b35;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        
+        /* Urgency */
+        .urgency {
+            background: #fed7d7;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .urgency-box {
+            background: white;
+            border: 3px solid #fc8181;
+            border-radius: 15px;
+            padding: 2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .urgency h2 {
+            color: #c53030;
+            margin-bottom: 1rem;
+        }
+        
+        .countdown {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #e53e3e;
+            margin: 1rem 0;
+        }
+        
+        /* Guarantee */
+        .guarantee {
+            background: #f0fff4;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .guarantee-box {
+            background: white;
+            border: 3px solid #38a169;
+            border-radius: 15px;
+            padding: 2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .guarantee h2 {
+            color: #38a169;
+            margin-bottom: 1rem;
+        }
+        
+        /* Final CTA */
+        .final-cta {
+            background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .final-cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        /* FAQ */
+        .faq {
+            background: white;
+            padding: 80px 0;
+        }
+        
+        .faq-item {
+            background: #f7fafc;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .faq-question {
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 1rem;
+        }
+        
+        .faq-answer {
+            color: #4a5568;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero .subheadline {
+                font-size: 1.1rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .container {
+                padding: 0 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">Kaiwu FluentPro Mandarin<sup>™</sup></div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Get Your Dream Job</h1>
+            <div class="subheadline">Speak Business Mandarin. Get Promoted. Earn More.</div>
+            <p>You work hard. You deserve better. Chinese language skills open doors. Big doors. The kind that lead to corner offices and bigger paychecks.</p>
+            <a href="#assessment" class="cta-button">Get My Free Career Assessment</a>
+            <span class="cta-subtext">Takes 5 minutes • Get results instantly • Available worldwide</span>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem">
+        <div class="container">
+            <h2 class="section-title">Does This Sound Like You?</h2>
+            <div class="problem-grid">
+                <div class="problem-item">
+                    <h3>✗ You Feel Left Out</h3>
+                    <p>Your coworkers handle China business. You watch. They get the recognition. You wonder "what if?"</p>
+                </div>
+                <div class="problem-item">
+                    <h3>✗ Promotion Passed You By</h3>
+                    <p>Someone else got promoted. Again. They speak Mandarin. You don't. The pattern is clear.</p>
+                </div>
+                <div class="problem-item">
+                    <h3>✗ Dream Jobs Say "No"</h3>
+                    <p>Perfect job posting. Perfect fit. Then you see it: "Mandarin preferred." Your heart sinks.</p>
+                </div>
+                <div class="problem-item">
+                    <h3>✗ You Avoid China Projects</h3>
+                    <p>Big opportunity comes up. China market expansion. You stay quiet. Someone else volunteers.</p>
+                </div>
+                <div class="problem-item">
+                    <h3>✗ You Feel Stuck</h3>
+                    <p>Same desk. Same salary. Same routine. While others climb higher. You know you're capable of more.</p>
+                </div>
+                <div class="problem-item">
+                    <h3>✗ Money Talks</h3>
+                    <p>Bills pile up. Life gets expensive. But your paycheck stays flat. You need more income. Fast.</p>
+                </div>
+            </div>
+            <div class="cost-highlight">
+                This costs you $15,000-$30,000 per year in lost earnings
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="solution">
+        <div class="container">
+            <div class="solution-intro">
+                <h2>Here's What Changes Everything</h2>
+                <div class="tagline">Kaiwu FluentPro Mandarin™</div>
+            </div>
+            <div class="features-grid">
+                <div class="feature">
+                    <h3><span class="checkmark">✓</span> Real Work Situations</h3>
+                    <p>Learn what you actually need. Emails. Meetings. Phone calls. Daily office talk. Nothing fancy. Just what works.</p>
+                </div>
+                <div class="feature">
+                    <h3><span class="checkmark">✓</span> Get Noticed Fast</h3>
+                    <p>Your boss sees you handling China business. Suddenly you're valuable. Promotable. Worth more money.</p>
+                </div>
+                <div class="feature">
+                    <h3><span class="checkmark">✓</span> Native Speaker Teacher</h3>
+                    <p>Learn from someone who lived it. Business culture. Office politics. What really matters at work.</p>
+                </div>
+                <div class="feature">
+                    <h3><span class="checkmark">✓</span> Use It Today</h3>
+                    <p>Start speaking on day one. No textbook theory. No boring grammar. Just practical skills you use immediately.</p>
+                </div>
+                <div class="feature">
+                    <h3><span class="checkmark">✓</span> Six Weeks to Success</h3>
+                    <p>Fast results. Real confidence. People notice the change in you. Your career takes off.</p>
+                </div>
+                <div class="feature">
+                    <h3><span class="checkmark">✓</span> Fits Your Life</h3>
+                    <p>Busy schedule? No problem. Study when you can. Where you want. Your phone. Your laptop. Your choice.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Section -->
+    <section class="social-proof">
+        <div class="container">
+            <h2 class="section-title">What People Say</h2>
+            <div class="testimonials">
+                <div class="testimonial">
+                    <div class="testimonial-text">"I got promoted in three months. My boss said handling Shanghai directly made me indispensable."</div>
+                    <div class="testimonial-author">- Sarah M., Operations Manager</div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-text">"Finally landed my dream job. The interview went perfect when I spoke with their Chinese team."</div>
+                    <div class="testimonial-author">- Michael R., Procurement Specialist</div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-text">"I volunteer for China projects now. My manager sees me differently. Big difference in my confidence."</div>
+                    <div class="testimonial-author">- Ana L., Customer Service Lead</div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-text">"This actually works. I use these phrases every single day. Worth every penny."</div>
+                    <div class="testimonial-author">- David K., Logistics Coordinator</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Offer Section -->
+    <section class="offer" id="assessment">
+        <div class="container">
+            <h2>Start Here (It's Free)</h2>
+            <div class="offer-benefits">
+                <div class="offer-benefit">
+                    <h3>See Your Level</h3>
+                    <p>Quick test shows where you stand right now</p>
+                </div>
+                <div class="offer-benefit">
+                    <h3>Find Your Gaps</h3>
+                    <p>What's holding you back at work</p>
+                </div>
+                <div class="offer-benefit">
+                    <h3>Get Your Plan</h3>
+                    <p>Custom roadmap for your job and industry</p>
+                </div>
+                <div class="offer-benefit">
+                    <h3>Calculate Your Worth</h3>
+                    <p>How much more you could earn</p>
+                </div>
+            </div>
+            
+            <div class="process-steps">
+                <h3>What Happens:</h3>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <p>Quick 5-minute assessment</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <p>Instant results and insights</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <p>Free 30-minute strategy call</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <p>Your personal career plan</p>
+                    </div>
+                </div>
+            </div>
+            
+            <a href="#" class="cta-button" style="margin-top: 2rem;">Start My Career Assessment Now</a>
+        </div>
+    </section>
+
+    <!-- Urgency Section -->
+    <section class="urgency">
+        <div class="container">
+            <div class="urgency-box">
+                <h2>Limited Spots Available Globally</h2>
+                <p>We only accept 20 new students per month to ensure personalized attention and guaranteed results.</p>
+                <div class="countdown">Next cohort starts: February 15, 2025</div>
+                <div class="countdown">Spots remaining: 7</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guarantee Section -->
+    <section class="guarantee">
+        <div class="container">
+            <div class="guarantee-box">
+                <h2>100% Career Results Guarantee</h2>
+                <p>Confidently handle Chinese communication in your workplace within 6 weeks, or receive a full refund. We're that confident in our proven system.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>Ready to Accelerate Your Career?</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem;">Don't let language barriers limit your professional potential another day.</p>
+            <a href="#" class="cta-button">Claim My Free Assessment Now</a>
+            <span class="cta-subtext">Takes 5 minutes • Available worldwide • No spam, ever</span>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <div class="faq-question">Can I really learn business Mandarin in just 6 weeks?</div>
+                <div class="faq-answer">Yes! Our focus is on practical workplace communication, not academic fluency. You'll learn the 200 most important phrases and cultural insights that matter for professional success. We're not teaching you to write poetry – we're teaching you to excel at work.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">What if I've never studied Mandarin before?</div>
+                <div class="faq-answer">Perfect! We start from zero and build exactly what you need for workplace contexts. No time wasted on irrelevant vocabulary or grammar rules you'll never use in business.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Do you work with students from different countries?</div>
+                <div class="faq-answer">Yes! We've helped professionals from 25+ countries improve their China-related work performance. Our online format works across all time zones, and we understand the unique challenges of different markets.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">What if English isn't my first language?</div>
+                <div class="faq-answer">No problem! Our instructor explains concepts clearly and provides materials in simple, business-focused English. Many of our most successful students are multilingual professionals.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">How is this different from other language courses?</div>
+                <div class="faq-answer">Most courses teach general Mandarin or academic Chinese. We focus exclusively on workplace scenarios you'll actually encounter: emails with suppliers, video calls with colleagues, presentations to Chinese teams, and navigating office relationships across cultures.</div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Simple countdown timer (you can replace with real logic)
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const target = new Date('2025-02-15').getTime();
+            const distance = target - now;
+            
+            if (distance > 0) {
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                document.querySelector('.countdown').innerHTML = `Next cohort starts in: ${days} days`;
+            }
+        }
+        
+        // Update countdown every hour
+        updateCountdown();
+        setInterval(updateCountdown, 3600000);
+    </script>
+</body>
+</html>
