@@ -602,12 +602,21 @@
     return date.toLocaleDateString('en-US', options);
   }
 
-  const today = new Date();
-  const cohortStart = new Date(today);
-  cohortStart.setDate(today.getDate() + 12);
+  function getNextCohortDate() {
+    const today = new Date();
+    let cohort = new Date(today);
+    cohort.setDate(today.getDate() + 12); // baseline = +12 days
 
-  document.getElementById("cohort-date").innerText = formatDate(cohortStart);
+    // move forward until Monday
+    while (cohort.getDay() !== 1) { // 1 = Monday
+      cohort.setDate(cohort.getDate() + 1);
+    }
+    return cohort;
+  }
+
+  document.getElementById("cohort-date").innerText = formatDate(getNextCohortDate());
 </script>
+
 
                 
                 
