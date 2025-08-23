@@ -719,10 +719,118 @@ document.addEventListener('DOMContentLoaded', function boot() {
                 </div>
                 <div class="countdown">Spots remaining: 
                     
-                    <p>Next Cohort Starts: <strong><span id="cohort-date"></span></strong></p>
-<p id="spots-wrap" style="display:inline-block">
-  <span id="spots-left"></span> spots left
-</p>
+                   <script>
+document.addEventListener('DOMContentLoaded', function boot() {
+  const LOCALE = 'id-ID';         // 'en-US' or 'zh-CN' if you prefer
+  const MIN_LEAD_DAYS = 12;       // baseline gap to next Monday
+  const DECAY_INTERVAL_HOURS = 36;// set 0 to disable decay
+  const CTA_SELECTOR = '.cta-enroll';
+
+  function formatDate(date) {
+    return date.toLocaleDateString(LOCALE, { year: 'numeric', month: 'long', day: 'numeric' });
+  }
+  function toIsoDate(d) {
+    const z = new Date(d.getTime());
+    z.setHours(0,0,0,0);
+    return z.toISOString().slice(0,10);
+  }
+  function getNextCohortDate() {
+    const today = new Date();
+    let cohort = new Date();
+    cohort.setDate(today.getDate() + MIN_LEAD_DAYS);
+    while (cohort.getDay() !== 1) { // 1 = Monday
+      cohort.setDate(cohort.getDate() + 1);
+    }
+    return cohort;
+  }
+
+  // storage keys
+  function keySpots(dateIso){ return `kfw_cohort_${dateIso}_spots`; }
+  function keyDecay(dateIso){ return `kfw_cohort_${dateIso}_lastdecay`; }
+
+  function initSpots(dateIso) {
+    const k = keySpots(dateIso);
+    let spots = parseInt(localStorage.getItem(k), 10);
+    if (Number.isNaN(spots)) {
+      spots = Math.floor(Math.random() * (12 - 6 + 1)) + 6; // seed 6–12
+      localStorage.setItem(k, String(spots));
+      localStorage.setItem(keyDecay(dateIso), String(Date.now()));
+    }
+    return spots;
+  }
+  function setSpots(dateIso, n) {
+    n = Math.max(2, n); // floor so it never hits 0 visually
+    localStorage.setItem(keySpots(dateIso), String(n));
+    return n;
+  }
+  function maybeDecay(dateIso) {
+    if (!DECAY_INTERVAL_HOURS) return parseInt(localStorage.getItem(keySpots(dateIso)), 10);
+    const lastStr = localStorage.getItem(keyDecay(dateIso));
+    const last = lastStr ? parseInt(lastStr, 10) : 0;
+    const now = Date.now();
+    const intervalMs = DECAY_INTERVAL_HOURS * 3600 * 1000;
+    if (!last || (now - last) > intervalMs) {
+      const current = parseInt(localStorage.getItem(keySpots(dateIso)), 10) || 6;
+      const next = Math.max(2, current - 1);
+      localStorage.setItem(keySpots(dateIso), String(next));
+      localStorage.setItem(keyDecay(dateIso), String(now));
+      return next;
+    }
+    return parseInt(localStorage.getItem(keySpots(dateIso)), 10);
+  }
+
+  function renderSpots(n) {
+    const el = document.getElementById('spots-left');
+    if (el) {
+      el.textContent = n;
+      el.classList.toggle('low', n <= 4);
+      el.classList.add('bump');
+      setTimeout(() => el.classList.remove('bump'), 260);
+    }
+  }
+
+  function bindCtas(dateIso) {
+    document.querySelectorAll(CTA_SELECTOR).forEach(btn => {
+      btn.addEventListener('click', () => {
+        const current = parseInt(localStorage.getItem(keySpots(dateIso)), 10);
+        if (!Number.isNaN(current)) {
+          renderSpots(setSpots(dateIso, current - 1));
+        }
+      }, { passive: true });
+    });
+  }
+
+  // boot sequence
+  const cohortDate = getNextCohortDate();
+  const cohortIso = toIsoDate(cohortDate);
+
+  // write date
+  const dateEl = document.getElementById('cohort-date');
+  if (dateEl) dateEl.textContent = formatDate(cohortDate);
+
+  // reset if cohort changed
+  const lastIso = localStorage.getItem('kfw_last_cohort_iso');
+  if (lastIso !== cohortIso) {
+    localStorage.setItem('kfw_last_cohort_iso', cohortIso);
+    localStorage.removeItem(keySpots(lastIso || 'noop'));
+    localStorage.removeItem(keyDecay(lastIso || 'noop'));
+  }
+
+  // init + maybe decay + render
+  let spots = initSpots(cohortIso);
+  spots = maybeDecay(cohortIso);
+  renderSpots(spots);
+
+  // bind buttons
+  bindCtas(cohortIso);
+});
+</script>
+
+<style>
+#spots-left.low { font-weight: 700; }
+@keyframes pulse { 0%{transform:scale(1)} 40%{transform:scale(1.15)} 100%{transform:scale(1)} }
+#spots-left.bump { animation: pulse 250ms ease-out; }
+</style>
 
                 
                 
