@@ -592,7 +592,26 @@
             <div class="urgency-box">
                 <h2>Limited Spots Available Globally</h2>
                 <p>We only accept 20 new students per month to ensure personalized attention and guaranteed results.</p>
-                <div class="countdown">Next cohort starts: February 15, 2025</div>
+                <div class="countdown">Next cohort starts: 
+                    
+                    <span id="cohort-date"></span>
+
+<script>
+  function formatDate(date) {
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    return date.toLocaleDateString('en-US', options);
+  }
+
+  const today = new Date();
+  const cohortStart = new Date(today);
+  cohortStart.setDate(today.getDate() + 12);
+
+  document.getElementById("cohort-date").innerText = formatDate(cohortStart);
+</script>
+
+                
+                
+                </div>
                 <div class="countdown">Spots remaining: 7</div>
             </div>
         </div>
