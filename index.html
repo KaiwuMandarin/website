@@ -784,6 +784,24 @@ document.addEventListener('DOMContentLoaded', function boot() {
         });
 
         // Simple countdown timer (you can replace with real logic)
+
+<section id="cohort-countdown" aria-label="Cohort countdown" style="margin-top:24px">
+  <h3>Registration closes in</h3>
+  <div class="timer" style="display:flex;gap:12px;flex-wrap:wrap">
+    <span><strong id="cd-days">00</strong><small style="margin-left:4px">Days</small></span>
+    <span><strong id="cd-hours">00</strong><small style="margin-left:4px">Hours</small></span>
+    <span><strong id="cd-mins">00</strong><small style="margin-left:4px">Minutes</small></span>
+    <span><strong id="cd-secs">00</strong><small style="margin-left:4px">Seconds</small></span>
+  </div>
+</section>
+
+
+
+
+
+
+
+        
         function updateCountdown() {
             const now = new Date().getTime();
             const target = new Date('2025-02-15').getTime();
@@ -801,3 +819,4 @@ document.addEventListener('DOMContentLoaded', function boot() {
     </script>
 </body>
 </html>
+
