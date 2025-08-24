@@ -1,0 +1,1433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaiwu FluentPro™ Mandarin - Advance Your Career with Professional Mandarin</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #4a5568;
+        }
+        
+        .logo sup {
+            font-size: 0.6rem;
+            margin-left: 2px;
+        }
+        
+        .header-cta {
+            background: linear-gradient(45deg, #ff6b35, #ff8c42);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+        }
+        
+        .header-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M20 20c0-11.046-8.954-20-20-20v20h20z'/%3E%3C/g%3E%3C/svg%3E");
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .hero .subheadline {
+            font-size: 1.6rem;
+            margin-bottom: 1.5rem;
+            opacity: 0.95;
+            font-weight: 500;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.9;
+            line-height: 1.7;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(45deg, #ff6b35, #ff8c42, #ff6b35);
+            background-size: 200% 200%;
+            color: white;
+            padding: 24px 48px;
+            font-size: 1.4rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.4s ease;
+            box-shadow: 
+                0 8px 25px rgba(255, 107, 53, 0.4),
+                0 0 40px rgba(255, 107, 53, 0.2),
+                inset 0 1px 0 rgba(255,255,255,0.3);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            animation: glow-pulse 2s ease-in-out infinite alternate;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            position: relative;
+        }
+        
+        .cta-button::before {
+            content: '🎯';
+            margin-right: 8px;
+        }
+        
+        @keyframes glow-pulse {
+            0% {
+                box-shadow: 
+                    0 8px 25px rgba(255, 107, 53, 0.4),
+                    0 0 40px rgba(255, 107, 53, 0.2),
+                    inset 0 1px 0 rgba(255,255,255,0.3);
+                background-position: 0% 50%;
+            }
+            100% {
+                box-shadow: 
+                    0 12px 35px rgba(255, 107, 53, 0.6),
+                    0 0 60px rgba(255, 107, 53, 0.4),
+                    inset 0 1px 0 rgba(255,255,255,0.3);
+                background-position: 100% 50%;
+            }
+        }
+        
+        .cta-button:hover {
+            background: linear-gradient(45deg, #e55a2b, #e55a2b, #ff6b35);
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 
+                0 15px 45px rgba(255, 107, 53, 0.6),
+                0 0 80px rgba(255, 107, 53, 0.4),
+                inset 0 1px 0 rgba(255,255,255,0.4);
+            animation: none;
+        }
+        
+        .cta-subtext {
+            display: block;
+            margin-top: 15px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        .social-proof-bar {
+            background: rgba(255, 255, 255, 0.1);
+            margin-top: 3rem;
+            padding: 1.5rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .social-proof-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1.5rem;
+            text-align: center;
+        }
+        
+        .stat {
+            border-right: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .stat:last-child {
+            border-right: none;
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #ffd700;
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Problem Section */
+        .problem {
+            background: white;
+            padding: 80px 0;
+            position: relative;
+        }
+        
+        .section-title {
+            font-size: 2.8rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: #2d3748;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 3rem;
+        }
+        
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .problem-item {
+            background: #f7fafc;
+            padding: 2.5rem 2rem;
+            border-radius: 15px;
+            border-left: 5px solid #ff6b35;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .problem-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .problem-item::before {
+            content: '';
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            font-size: 1.5rem;
+        }
+        
+        .problem-item h3 {
+            color: #e53e3e;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .problem-item p {
+            color: #4a5568;
+            line-height: 1.6;
+        }
+        
+        .cost-highlight {
+            background: linear-gradient(135deg, #fed7d7, #fbb6ce);
+            border: 3px solid #fc8181;
+            border-radius: 15px;
+            padding: 2.5rem;
+            text-align: center;
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #c53030;
+            position: relative;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+        }
+        
+        .cost-highlight::before {
+            content: '💸';
+            font-size: 2rem;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        /* Solution Section */
+        .solution {
+            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+            padding: 80px 0;
+        }
+        
+        .solution-intro {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .solution-intro h2 {
+            font-size: 2.8rem;
+            color: #2d3748;
+            margin-bottom: 1rem;
+        }
+        
+        .solution-intro .tagline {
+            font-size: 1.4rem;
+            color: #667eea;
+            font-style: italic;
+            font-weight: 600;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+        }
+        
+        .feature {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 6px 25px rgba(0,0,0,0.08);
+            border-top: 5px solid #667eea;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .feature:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+        }
+        
+        .feature::before {
+            content: attr(data-icon);
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            font-size: 2rem;
+        }
+        
+        .feature h3 {
+            color: #2d3748;
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+        
+        .feature p {
+            color: #4a5568;
+            line-height: 1.7;
+        }
+        
+        .checkmark {
+            color: #38a169;
+            font-weight: bold;
+            margin-right: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        /* Social Proof */
+        .social-proof {
+            background: white;
+            padding: 80px 0;
+        }
+        
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+        
+        .testimonial {
+            background: #f7fafc;
+            padding: 2.5rem;
+            border-radius: 15px;
+            border-left: 5px solid #667eea;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .testimonial::before {
+            content: '"';
+            position: absolute;
+            top: 1rem;
+            left: 1.5rem;
+            font-size: 4rem;
+            color: #667eea;
+            opacity: 0.3;
+            font-family: serif;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            color: #4a5568;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            padding-left: 1rem;
+        }
+        
+        .testimonial-author {
+            font-weight: bold;
+            color: #2d3748;
+            padding-left: 1rem;
+        }
+        
+        .testimonial-result {
+            background: #e6fffa;
+            color: #00695c;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            display: inline-block;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-top: 1rem;
+            margin-left: 1rem;
+        }
+
+        /* Offer Section */
+        .offer {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+        }
+        
+        .offer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        
+        .offer-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .offer h2 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+        }
+        
+        .offer-subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .offer-benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .offer-benefit {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 2rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .offer-benefit:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px);
+        }
+        
+        .offer-benefit h3 {
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .process-steps {
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 15px;
+            padding: 3rem 2rem;
+            margin: 3rem 0;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .process-steps h3 {
+            margin-bottom: 2rem;
+            font-size: 1.4rem;
+        }
+        
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+        
+        .step {
+            text-align: center;
+            padding: 1.5rem 1rem;
+        }
+        
+        .step-number {
+            background: #ff6b35;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+        }
+     
+        /* Urgency */
+        .urgency {
+            background: linear-gradient(135deg, #fed7d7, #fbb6ce);
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .urgency-box {
+            background: white;
+            border: 3px solid #fc8181;
+            border-radius: 15px;
+            padding: 3rem 2rem;
+            max-width: 700px;
+            margin: 0 auto;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        
+        .urgency-box::before {
+            content: '';
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 3rem;
+            background: white;
+            padding: 0 1rem;
+        }
+        
+        .urgency h2 {
+            color: #c53030;
+            margin-bottom: 1rem;
+            font-size: 2.2rem;
+        }
+        
+        .countdown {
+            font-size: 1.6rem;
+            font-weight: bold;
+            color: #e53e3e;
+            margin: 1.5rem 0;
+        }
+        
+        .spots-counter {
+            background: #c53030;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            display: inline-block;
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin: 1rem 0;
+            animation: pulse-spots 2s infinite;
+        }
+        
+        @keyframes pulse-spots {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        #spots-left.low { 
+            color: #ffd700;
+            animation: blink 1s infinite;
+        }
+        
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0.7; }
+        }
+        
+        .secure-spot-cta {
+            background: linear-gradient(45deg, #c53030, #e53e3e);
+            color: white;
+            padding: 20px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.3rem;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 2rem;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 8px 25px rgba(197, 48, 48, 0.4);
+        }
+        
+        .secure-spot-cta::before {
+            content: '🔒';
+            margin-right: 10px;
+        }
+        
+        .secure-spot-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(197, 48, 48, 0.6);
+        }
+
+        /* Guarantee */
+        .guarantee {
+            background: linear-gradient(135deg, #f0fff4, #dcfce7);
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .guarantee-box {
+            background: white;
+            border: 3px solid #38a169;
+            border-radius: 15px;
+            padding: 3rem 2rem;
+            max-width: 700px;
+            margin: 0 auto;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        
+        .guarantee-box::before {
+            content: '';
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 3rem;
+            background: white;
+            padding: 0 1rem;
+        }
+        
+        .guarantee h2 {
+            color: #38a169;
+            margin-bottom: 1.5rem;
+            font-size: 2.2rem;
+        }
+        
+        .guarantee p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #2d3748;
+        }
+
+        /* Final CTA */
+        .final-cta {
+            background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+        }
+        
+        .final-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M20 20.5V18H0v-2h20v2.5zm0 2V23H0v-2h20v2.5z'/%3E%3C/g%3E%3C/svg%3E");
+        }
+        
+        .final-cta-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .final-cta h2 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+        }
+        
+        .final-cta-subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .final-benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .final-benefit {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .final-benefit-icon {
+            font-size: 2rem;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        /* FAQ */
+        .faq {
+            background: white;
+            padding: 80px 0;
+        }
+        
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            background: #f7fafc;
+            border-radius: 15px;
+            padding: 2.5rem;
+            margin-bottom: 1.5rem;
+            border-left: 5px solid #667eea;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+        
+        .faq-question {
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .faq-answer {
+            color: #4a5568;
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #2d3748;
+            color: white;
+            padding: 4rem 0 2rem 0;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 2.5rem;
+        }
+        
+        .footer-section h3 {
+            color: #667eea;
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+        
+        .footer-section p, .footer-section li {
+            color: #cbd5e0;
+            margin-bottom: 0.8rem;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section a {
+            color: #cbd5e0;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-section a:hover {
+            color: #667eea;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid #4a5568;
+            padding-top: 2rem;
+            text-align: center;
+        }
+        
+        .footer-bottom p {
+            color: #a0aec0;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            background: rgba(102, 126, 234, 0.2);
+            border-radius: 50%;
+            color: #667eea;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .social-link:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero .subheadline {
+                font-size: 1.2rem;
+            }
+            
+            .section-title {
+                font-size: 2.2rem;
+            }
+            
+            .container {
+                padding: 0 15px;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .cta-button {
+                padding: 18px 35px;
+                font-size: 1.2rem;
+            }
+            
+            .social-proof-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .stat {
+                border-right: none;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+                padding-bottom: 1rem;
+            }
+            
+            .stat:nth-last-child(-n+2) {
+                border-bottom: none;
+            }
+        }
+        
+        /* Add feature icons */
+        .feature[data-icon="🚀"] { border-top-color: #ff6b35; }
+        .feature[data-icon="👑"] { border-top-color: #ffd700; }
+        .feature[data-icon="🎯"] { border-top-color: #38a169; }
+        .feature[data-icon="⚡"] { border-top-color: #667eea; }
+        .feature[data-icon="📈"] { border-top-color: #9f7aea; }
+        .feature[data-icon="🌏"] { border-top-color: #06b6d4; }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Kaiwu FluentPro™ Mandarin<sup></sup></div>
+                <a href="https://wa.me/6281770250232?text=Hi%20Kaiwu%2C%20I%27d%20love%20the%205-min%20Career%20Assessment." class="header-cta">🔥 Secure My Spot</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">⭐ Trusted by 2,500+ Professionals Worldwide</div>
+                <h1>Get Your Dream Job</h1>
+                <div class="subheadline">Speak Business Mandarin. Get Promoted. Earn More.</div>
+                <p>You work hard. You deserve better. Chinese language skills open doors. Big doors. The kind that lead to corner offices, bigger paychecks, exclusive opportunities.</p>
+
+                <a href="https://wa.me/6281770250232?text=Hi%20Kaiwu%2C%20I%27d%20love%20the%205-min%20Career%20Assessment." class="cta-button cta-enroll">
+                    Get My Free Assessment</a>
+                <span class="cta-subtext">⚡ Takes 5 minutes • Get results instantly • Available worldwide</span>
+                
+                <div class="social-proof-bar">
+                    <div class="social-proof-stats">
+                        <div class="stat">
+                            <span class="stat-number">2,500+</span>
+                            <span class="stat-label">Careers Transformed</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">35%</span>
+                            <span class="stat-label">Average Salary Increase</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">6 Weeks</span>
+                            <span class="stat-label">To Workplace Fluency</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">98%</span>
+                            <span class="stat-label">Success Rate</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem">
+        <div class="container">
+            <h2 class="section-title">Does This Sound Like You?</h2>
+            <p class="section-subtitle">If you nodded yes to any of these, you're not alone...</p>
+            <div class="problem-grid">
+                <div class="problem-item">
+                    <h3>✗ You Feel Left Out</h3>
+                    <p>You saw people handle China business. You watch. They get huge profits. You wonder "what if?"</p>
+                </div>
+                <div class="problem-item">
+                    <h3>✗ Promotion Passed You By</h3>
+                    <p>Someone else got promoted. Again. They speak Mandarin. You don't. The pattern is clear.</p>
+                </div>
+                <div class="problem-item">
+                    <h3>✗ Dream Jobs Say "No"</h3>
+                    <p>Perfect job posting. Perfect fit. Then you see it: "Mandarin preferred." Your heart sinks.</p>
+                </div>
+                <div class="problem-item">
+                    <h3>✗ You Avoid China Projects</h3>
+                    <p>Big opportunity comes up. China market expansion. You stay quiet. Someone else volunteers.</p>
+                </div>
+                <div class="problem-item">
+                    <h3>✗ You Feel Stuck</h3>
+                    <p>Same desk. Same salary. Same routine. While others climb higher. You know you're capable of more.</p>
+                </div>
+                <div class="problem-item">
+                    <h3>✗ Money Stress Keeps Growing</h3>
+                    <p>Bills pile up. Life gets expensive. But your paycheck stays flat. You need more income. Fast.</p>
+                </div>
+            </div>
+            <div class="cost-highlight">
+                <strong>The Real Cost:</strong> This language barrier costs you $15,000-$50,000 per year in lost earnings, missed promotions, and career stagnation
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="solution">
+        <div class="container">
+            <div class="solution-intro">
+                <h2>Here's What Changes Everything</h2>
+                <div class="tagline">Kaiwu FluentPro™ Mandarin</div>
+                <p style="margin-top: 1rem; font-size: 1.1rem; color: #4a5568;">The only business Mandarin program designed by <u>Former China Project Lead<u> who knows exactly what you need to succeed</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature">
+                    <h3><span class="checkmark">✔</span> Real Work Situations</h3>
+                    <p>Learn what you actually need. Emails. Meetings. Phone calls. Daily office talk. Nothing fancy. Just what works.</p>
+                </div>
+                <div class="feature">
+                    <h3><span class="checkmark">✔</span> Get Noticed Fast</h3>
+                    <p>Your boss sees you handling China business. Suddenly you're valuable. Promotable. Worth more money.</p>
+                </div>
+                <div class="feature">
+                    <h3><span class="checkmark">✔</span> Learn from Real Experience</h3>
+                    <p>Trained by someone who lived it. Navigated the culture. Gets the unwritten rules that textbooks never teach.</p>
+                </div>
+                <div class="feature">
+                    <h3><span class="checkmark">✔</span> Use It Today</h3>
+                    <p>Start speaking on day one. No textbook theory. No boring grammar. Just practical skills you use immediately.</p>
+                </div>
+                <div class="feature">
+                    <h3><span class="checkmark">✔</span> Six Weeks to Success</h3>
+                    <p>Fast results. Fast results. Real confidence. People notice the change in you. Your career takes off.</p>
+                </div>
+                <div class="feature">
+                    <h3><span class="checkmark">✔</span> Fits Your Crazy Schedule</h3>
+                    <p>Busy schedule? No problem. Study when you can. Where you want. Your phone. Your laptop. Your choice.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Section -->
+    <section class="social-proof">
+        <div class="container">
+            <h2 class="section-title">Success Stories That Inspire</h2>
+            <p class="section-subtitle">Real professionals. Real results. Real career transformations.</p>
+            <div class="testimonials">
+                <div class="testimonial">
+                    <div class="testimonial-text">"My company stopped relying on an interpreter. I now lead our weekly Shanghai calls, we rescued a stalled PO, and I got an 11% bump at mid-year."</div>
+                    <div class="testimonial-author">- Priya Nair, Operations Manager</div>
+                    <div class="testimonial-result">💰 >10% salary increase</div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-text">"Finally landed my dream job. The interview went perfect when I spoke confidently with their Chinese leadership team. Definitely a game changer."</div>
+                    <div class="testimonial-author">- Shanon, Product Marketing</div>
+                    <div class="testimonial-result">🚀 Dream job secured</div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-text">"Now I talk directly with China partners—pricing clearer, timelines tighter, results better. Confidence is up big time. Xiexie"</div>
+                    <div class="testimonial-author">- Budi S., Business Owner</div>
+                    <div class="testimonial-result">📈 +40% business revenue</div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-text">"This actually works. I use these phrases every single day. Simple and practical."</div>
+                    <div class="testimonial-author">- Henny, Finance</div>
+                    <div class="testimonial-result">⭐ Promoted within 4 months</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Offer Section -->
+    <section class="offer" id="assessment">
+        <div class="container">
+            <div class="offer-content">
+                <h2>Start Your Transformation (It's Free)</h2>
+                <p class="offer-subtitle">Discover your career potential with our exclusive assessment</p>
+                <div class="offer-benefits">
+                    <div class="offer-benefit">
+                        <h3>📊 See Your Current Level</h3>
+                        <p>Quick diagnostic shows exactly where you stand and what's possible</p>
+                    </div>
+                    <div class="offer-benefit">
+                        <h3>🔍 Find Your Career Gaps</h3>
+                        <p>Identify what's really holding you back from that next promotion</p>
+                    </div>
+                    <div class="offer-benefit">
+                        <h3>🗺️ Get Your Custom Plan</h3>
+                        <p>Personalized roadmap for your specific job, industry, and goals</p>
+                    </div>
+                    <div class="offer-benefit">
+                        <h3>💰 Calculate Your Worth</h3>
+                        <p>See exactly how much more you could earn with Mandarin skills</p>
+                    </div>
+                </div>
+                
+                <div class="process-steps">
+                    <h3>Here's What Happens Next:</h3>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <p><strong>Quick Assessment</strong><br>5-minute career evaluation</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <p><strong>Instant Results</strong><br>Get your personal report</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <p><strong>Strategy Call</strong><br>Free 30-minute consultation</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <p><strong>Your Career Plan</strong><br>Custom roadmap to success</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="https://wa.me/6281770250232?text=Hi%20Kaiwu%2C%20I%27d%20love%20the%205-min%20Career%20Assessment." class="cta-button cta-enroll" style="margin-top: 2rem;">Get My Free Assessment Now</a>
+                <span class="cta-subtext">⚡ Instant access • No spam • Worldwide availability</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Urgency Section -->
+    <section class="urgency">
+        <div class="container">
+            <div class="urgency-box">
+                <h2>🗓️‼️ Limited Spots Available This Month</h2>
+                <p>We only accept 20 new students per month to ensure personalized attention and guaranteed results.</p>
+                <div class="countdown">Next cohort starts: <span id="cohort-date"></span></div>
+                <div class="spots-counter">🔥 Only <span id="spots-left">7</span> spots remaining this month</div>
+                <p style="margin: 1rem 0; font-style: italic;">Don't let another month pass watching others get ahead. Your spot won't stay open.</p>
+                <a href="https://wa.me/6281770250232?text=Hi%20Kaiwu%2C%20I%27d%20love%20to%20secure%20my%20spot%20in%20this%20month%27s%20cohort!" class="secure-spot-cta">Secure My Spot Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guarantee Section -->
+    <section class="guarantee">
+        <div class="container">
+            <div class="guarantee-box">
+                <h2>100% Career Results Guarantee</h2>
+                <p><strong>Confidently handle Chinese business communication within 6 weeks, or get every penny back.</strong></p>
+                <p style="margin-top: 1rem;">We're so confident in our proven system that we guarantee you'll see measurable improvement in your workplace effectiveness. If you don't feel more confident and capable in your China-related work after completing our program, we'll refund 100% of your investment. No questions asked.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <div class="final-cta-content">
+                <h2>Your Career Breakthrough Awaits</h2>
+                <p class="final-cta-subtitle">Don't let language barriers limit your professional potential another day.</p>
+                
+                <div class="final-benefits">
+                    <div class="final-benefit">
+                        <span class="final-benefit-icon">🚀</span>
+                        <strong>Career Acceleration</strong>
+                        <p>Stand out immediately</p>
+                    </div>
+                    <div class="final-benefit">
+                        <span class="final-benefit-icon">💰</span>
+                        <strong>Higher Earnings</strong>
+                        <p>Command premium rates</p>
+                    </div>
+                    <div class="final-benefit">
+                        <span class="final-benefit-icon">🌟</span>
+                        <strong>Exclusive Opportunities</strong>
+                        <p>Access hidden job market</p>
+                    </div>
+                    <div class="final-benefit">
+                        <span class="final-benefit-icon">⚡</span>
+                        <strong>Fast Results</strong>
+                        <p>See changes in weeks</p>
+                    </div>
+                </div>
+                
+                <a href="https://wa.me/6281770250232?text=Hi%20Kaiwu%2C%20I%27m%20ready%20to%20transform%20my%20career%20with%20Mandarin%20skills!" class="cta-button cta-enroll">Claim My Career Assessment Now</a>
+                <span class="cta-subtext">⚡ Takes 5 minutes • Available worldwide • Zero risk</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <h2 class="section-title">Your Questions, Answered</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">🤔 Can I really learn business Mandarin in just 6 weeks?</div>
+                    <div class="faq-answer">Absolutely! We're not teaching you to become a translator. We focus on practical workplace communication—the 200 most crucial phrases and cultural insights for professional success. You'll learn what you actually need to excel at work, not academic poetry.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">🆕 What if I've never studied Mandarin before?</div>
+                    <div class="faq-answer">Perfect! Most of our most successful students started from zero. We build exactly what you need for workplace contexts. No time wasted on irrelevant vocabulary or grammar rules you'll never use in business settings.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">🌏 Do you work with professionals from different countries?</div>
+                    <div class="faq-answer">Yes! We've transformed careers for professionals in 25+ countries. Our online format works across all time zones, and we understand the unique challenges of different markets and cultural contexts.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">🗣️ What if English isn't my first language?</div>
+                    <div class="faq-answer">No problem at all! Our instructor explains concepts clearly using simple, business-focused English. Many of our most successful students are multilingual professionals who appreciate our clear, practical approach.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">⚖️ How is this different from other language courses?</div>
+                    <div class="faq-answer">Most courses teach general Mandarin or academic Chinese. We focus exclusively on real workplace scenarios: emails with suppliers, video calls with international teams, presentations to Chinese executives, and navigating cross-cultural business relationships that actually matter for your career.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">💰 What's the investment for the full program?</div>
+                    <div class="faq-answer">Investment details are shared during your free strategy call, customized based on your specific needs and goals. Most students see ROI within 3-6 months through promotions or salary increases. The free assessment gives you full transparency before any commitment.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Kaiwu FluentPro™ Mandarin</h3>
+                    <p>Empowering professionals worldwide to accelerate their careers through practical Mandarin language skills. Our proven system has helped thousands of professionals break through language barriers and achieve unprecedented career success in the global marketplace.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Actions</h3>
+                    <ul>
+                        <li><a href="https://wa.me/6281770250232">📊 Free Career Assessment</a></li>
+                        <li><a href="https://wa.me/6281770250232">💬 WhatsApp Support</a></li>
+                        <li><a href="#" onclick="alert('Privacy policy coming soon!')">🔒 Privacy Policy</a></li>
+                        <li><a href="#" onclick="alert('Terms of service coming soon!')">📋 Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Information</h3>
+                    <p>🌏 Available Worldwide (Online Training)</p>
+                    <p>📱 WhatsApp: +62 817-7025-0232</p>
+                    <p>✉️ Email: kaiwumc@protonmail.com</p>
+                    <p>🕐 Response Time: Within 24 hours</p>
+                    <p>🎯 Success Rate: 98% career improvement</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Career Transformation Results</h3>
+                    <p>Join thousands of professionals who've transformed their careers with our proven Mandarin training system.</p>
+                    <p><strong>🌟 Student satisfaction:</strong> 98% recommend us</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="social-links">
+                    <a href="#" class="social-link" title="LinkedIn">in</a>
+                    <a href="https://wa.me/6281770250232" class="social-link" title="WhatsApp">📱</a>
+                    <a href="mailto:kaiwumc@protonmail.com?subject=Career%20Assessment%20Request&body=Hi%20Kaiwu%2C%0A%0AI%27d%20love%20the%205-min%20Career%20Assessment.%0A%0AName%3A%20%0ARole%3A%20%0ATimezone%3A%20" class="social-link" title="Email">✉</a>
+                </div>
+                <p>&copy; 2025 开悟中文课程 | KaiWu FluentPro™ Chinese Professional Training. All rights reserved.</p>
+                <p style="margin-top: 0.5rem; opacity: 0.7;">🚀 Empowering careers through language mastery</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Enhanced JavaScript functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Enhanced cohort date and spots management
+            const LOCALE = 'en-US';
+            const MIN_LEAD_DAYS = 12;
+            const DECAY_INTERVAL_HOURS = 36;
+            const CTA_SELECTOR = '.cta-enroll, .secure-spot-cta';
+
+            function formatDate(date) {
+                return date.toLocaleDateString(LOCALE, { 
+                    year: 'numeric', 
+                    month: 'long', 
+                    day: 'numeric',
+                    weekday: 'long'
+                });
+            }
+
+            function toIsoDate(d) {
+                const z = new Date(d.getTime());
+                z.setHours(0,0,0,0);
+                return z.toISOString().slice(0,10);
+            }
+
+            function getNextCohortDate() {
+                const today = new Date();
+                let cohort = new Date();
+                cohort.setDate(today.getDate() + MIN_LEAD_DAYS);
+                while (cohort.getDay() !== 1) { // 1 = Monday
+                    cohort.setDate(cohort.getDate() + 1);
+                }
+                return cohort;
+            }
+
+            // Storage keys
+            function keySpots(dateIso){ return `kfw_cohort_${dateIso}_spots`; }
+            function keyDecay(dateIso){ return `kfw_cohort_${dateIso}_lastdecay`; }
+
+            function initSpots(dateIso) {
+                const k = keySpots(dateIso);
+                let spots = parseInt(localStorage.getItem(k), 10);
+                if (Number.isNaN(spots)) {
+                    spots = Math.floor(Math.random() * (12 - 6 + 1)) + 6; // seed 6–12
+                    localStorage.setItem(k, String(spots));
+                    localStorage.setItem(keyDecay(dateIso), String(Date.now()));
+                }
+                return spots;
+            }
+
+            function setSpots(dateIso, n) {
+                n = Math.max(2, n); // floor so it never hits 0 visually
+                localStorage.setItem(keySpots(dateIso), String(n));
+                return n;
+            }
+
+            function maybeDecay(dateIso) {
+                if (!DECAY_INTERVAL_HOURS) return parseInt(localStorage.getItem(keySpots(dateIso)), 10);
+                const lastStr = localStorage.getItem(keyDecay(dateIso));
+                const last = lastStr ? parseInt(lastStr, 10) : 0;
+                const now = Date.now();
+                const intervalMs = DECAY_INTERVAL_HOURS * 3600 * 1000;
+                if (!last || (now - last) > intervalMs) {
+                    const current = parseInt(localStorage.getItem(keySpots(dateIso)), 10) || 6;
+                    const next = Math.max(2, current - 1);
+                    localStorage.setItem(keySpots(dateIso), String(next));
+                    localStorage.setItem(keyDecay(dateIso), String(now));
+                    return next;
+                }
+                return parseInt(localStorage.getItem(keySpots(dateIso)), 10);
+            }
+
+            function renderSpots(n) {
+                const el = document.getElementById('spots-left');
+                if (el) {
+                    el.textContent = n;
+                    el.classList.toggle('low', n <= 4);
+                    el.classList.add('bump');
+                    setTimeout(() => el.classList.remove('bump'), 260);
+                }
+            }
+
+            function bindCtas(dateIso) {
+                document.querySelectorAll(CTA_SELECTOR).forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        const current = parseInt(localStorage.getItem(keySpots(dateIso)), 10);
+                        if (!Number.isNaN(current)) {
+                            renderSpots(setSpots(dateIso, current - 1));
+                        }
+                    }, { passive: true });
+                });
+            }
+
+            // Initialize
+            const cohortDate = getNextCohortDate();
+            const cohortIso = toIsoDate(cohortDate);
+
+            // Update date display
+            const dateEl = document.getElementById('cohort-date');
+            if (dateEl) dateEl.textContent = formatDate(cohortDate);
+
+            // Reset if cohort changed
+            const lastIso = localStorage.getItem('kfw_last_cohort_iso');
+            if (lastIso !== cohortIso) {
+                localStorage.setItem('kfw_last_cohort_iso', cohortIso);
+                localStorage.removeItem(keySpots(lastIso || 'noop'));
+                localStorage.removeItem(keyDecay(lastIso || 'noop'));
+            }
+
+            // Initialize spots and render
+            let spots = initSpots(cohortIso);
+            spots = maybeDecay(cohortIso);
+            renderSpots(spots);
+
+            // Bind CTA buttons
+            bindCtas(cohortIso);
+
+            // Add scroll-triggered animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Observe elements for animation
+            const elementsToObserve = document.querySelectorAll('.problem-item, .feature, .testimonial, .faq-item');
+            elementsToObserve.forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = 'all 0.6s ease';
+                observer.observe(el);
+            });
+        });
+
+        // Additional styles for animations
+        const animationStyles = `
+            #spots-left.low { 
+                font-weight: 700; 
+                animation: urgent-blink 1.5s infinite;
+            }
+            @keyframes urgent-blink { 
+                0%, 70% { opacity: 1; } 
+                71%, 100% { opacity: 0.6; } 
+            }
+            @keyframes pulse { 
+                0%{transform:scale(1)} 
+                40%{transform:scale(1.15)} 
+                100%{transform:scale(1)} 
+            }
+            #spots-left.bump { 
+                animation: pulse 250ms ease-out; 
+            }
+        `;
+        const styleSheet = document.createElement('style');
+        styleSheet.textContent = animationStyles;
+        document.head.appendChild(styleSheet);
+    </script>
+</body>
+</html>
